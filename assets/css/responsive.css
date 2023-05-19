@@ -1,0 +1,130 @@
+/* pc small */
+@media (min-width: 1023px) and (max-width: 1280px) {
+    .srolltop {
+        bottom: -236px;
+    }
+}
+
+/* tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+    .footer_mn.col.l-2 {
+        padding: 0px;
+    }
+
+    p,
+    a {
+        font-size: 1.5rem;
+    }
+
+    .nav_iconcontact.col.l-2.ls-2.m-2 {
+        margin-top: 10px;
+    }
+
+    .nav_menu.col.l-10.ls-10.m-10 {
+        display: none;
+    }
+
+    .menutable {
+        display: block;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex: 1;
+        margin-top: 4px;
+    }
+
+    .menutable p {
+        margin-left: 4px;
+        font-size: 1.6rem;
+        color: #5869da;
+    }
+
+    .menutable i {
+        font-size: 2em;
+        color: rgba(0, 0, 0, 0.4);
+    }
+
+
+}
+
+/*mobile*/
+@media (max-width: 740px) {
+
+    p,
+    a {
+        font-size: 1.5rem;
+    }
+
+    .footer_mn.col.l-2 {
+        padding: 0px;
+    }
+
+    .nav_iconcontact.col.l-2.ls-2.m-2 {
+        margin-top: 8px;
+    }
+
+    .header_option_contact {
+        display: none;
+    }
+
+    .header_option_language {
+        display: none;
+    }
+
+    .header_option_cart {
+        display: none;
+    }
+
+    .app_header.row {
+        justify-content: space-around;
+    }
+
+    .menutable {
+        display: block;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex: 1;
+        margin-top: 4px;
+    }
+
+    .nav_menu.col.l-10.ls-10.m-10 {
+        display: none;
+    }
+
+    .menutable p {
+        margin-left: 4px;
+        font-size: 1.6rem;
+        color: #5869da;
+    }
+
+    .menutable i {
+        font-size: 2em;
+        color: rgba(0, 0, 0, 0.4);
+    }
+
+    .header_option_search {
+        margin: 0;
+    }
+
+    .footer_finish.row {
+        flex-direction: column;
+        line-height: 20px;
+    }
+
+    .header__mb.row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.07);
+        padding: 10px 0 10px 20px;
+    }
+
+    .header__mb.row img {
+        width: 20px;
+        margin: 0 12px;
+        height: 20px;
+    }
+
+
+}
