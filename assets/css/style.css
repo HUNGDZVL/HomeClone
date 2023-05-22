@@ -445,15 +445,15 @@ ul.mini_menu::before {
 }
 
 .srolltop {
-  position: absolute;
-  right: 3%;
+  position: fixed;
+  bottom: 65px;
+  right: 50px;
   width: 40px;
-  bottom: 100px;
   height: 40px;
-  border: 1px solid transparent;
   background: #5869da;
   padding-left: 3px;
   border-radius: 50px;
+  display: none;
 }
 .srolltop a i {
   color: #fff;

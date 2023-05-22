@@ -9,6 +9,7 @@ function start() {
   checkScreenSize();
   handlesrollbrowser();
   showmenuWhensroll();
+  scrollTopicon();
 }
 start();
 function handleClickItemMenu(callbackOpenmenu) {
@@ -121,6 +122,25 @@ function showmenuWhensroll() {
       navMenu.classList.add("sticky");
     } else {
       navMenu.classList.remove("sticky");
+    }
+  });
+}
+
+function scrollTopicon() {
+  const scrollButton = $(".srolltop");
+
+  window.addEventListener("scroll", () => {
+    const scrollPercentage =
+      (window.scrollY /
+        (document.documentElement.scrollHeight - window.innerHeight)) *
+      100;
+
+    if (scrollPercentage >= 30) {
+      scrollButton.style.display = "block";
+      scrollButton.style.animation = "overShow 0.5s linear";
+    } else {
+      scrollButton.style.animation = "";
+      scrollButton.style.display = "none";
     }
   });
 }
