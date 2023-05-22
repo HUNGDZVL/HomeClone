@@ -7,6 +7,8 @@ window.addEventListener("resize", checkScreenSize);
 function start() {
   handleClickItemMenu(OpenMenu);
   checkScreenSize();
+  handlesrollbrowser();
+  showmenuWhensroll();
 }
 start();
 function handleClickItemMenu(callbackOpenmenu) {
@@ -87,5 +89,38 @@ function hadleClickPlusMinus() {
         minimenu.classList.add("disable");
       }
     };
+  });
+}
+
+function handlesrollbrowser() {
+  window.addEventListener("scroll", function () {
+    let scrollBar = document.getElementById("scrollProgress");
+    // lấy event sroll vào đối tượng window, sử dụng sroll để lấy vị trí cuộn trang,
+    // nếu truyệt k hỗ trọ lấy từ element thì để lấy qua body
+    let scrollTop =
+      document.documentElement.scrollTop || document.body.scrollTop;
+    //tính toán chiều cao của trang bằng  cách lấy hiệu của chiều cao toàn bộ trang - chiều cao của nội dung hiện thì trên trinh duyệ
+    let windowHeight =
+      document.documentElement.scrollHeight -
+      document.documentElement.clientHeight;
+    //tính toán phần trăm cuộn băng cách lấy chiều cao toàn bộ trang chia cho độ dài của nội dung hiện thị trên trinh duyệt nhân vs 100
+    let scrollPercent = (scrollTop / windowHeight) * 100;
+    // gán phần trăm tính được cho element
+    scrollBar.style.width = scrollPercent + "%";
+  });
+}
+
+function showmenuWhensroll() {
+  // bắt event croll trên trình duyệt
+  window.addEventListener("scroll", function () {
+    let navMenu = document.querySelector(".header_nav");
+    let scrollPosition = window.scrollY || window.pageYOffset;
+    // lấy vị trí scroll của trang qa croll Y và kiểm tra xem nếu vượt quá 30% thì add lass tickey cho element, ngc lại remove nó đi
+
+    if (scrollPosition >= 0.3 * window.innerHeight) {
+      navMenu.classList.add("sticky");
+    } else {
+      navMenu.classList.remove("sticky");
+    }
   });
 }
