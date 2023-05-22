@@ -66,7 +66,7 @@ function checkScreenSize() {
 
 function hadleClickPlusMinus() {
   const iconplusminus = $$(".plus_minus");
-  const minimenu = $$(".mini_menu");
+  const minimenu = $$(".mini_menu > li > a");
   minimenu.forEach((item) => {
     item.onclick = function (e) {
       e.stopPropagation();

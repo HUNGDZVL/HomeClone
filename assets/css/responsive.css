@@ -11,6 +11,7 @@
     .nav_menu.col.l-10.ls-10 {
         order: 1;
         opacity: 0;
+
     }
 
     .nav_row.row {
@@ -220,6 +221,9 @@
 
 /*mobile*/
 @media (max-width: 740px) {
+    .nav_menu.col.l-10.ls-10 {
+        padding: 0px !important;
+    }
 
 
     .header_option_contact {
