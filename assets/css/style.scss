@@ -157,10 +157,7 @@ ul {
     }
   }
 
-  & li.main:hover .mini_menu {
-    opacity: 1;
-    animation: toTop ease-in-out 0.3s;
-  }
+  
 
   & li.opinfo {
     display: flex;
@@ -180,10 +177,7 @@ ul {
       left: -17px;
     }
   }
-  & li.opinfo:hover .mini_menu {
-    opacity: 1;
-    animation: toTop ease-in-out 0.3s;
-  }
+  
 }
 @mixin optionicon {
   content: "Facebook";
@@ -425,24 +419,32 @@ ul.mini_menu {
 }
 .srolltop {
   position: absolute;
-  bottom: -53%;
   right: 3%;
   width: 40px;
+  bottom: 100px;
   height: 40px;
   border: 1px solid transparent;
   background: $colorBlue-primary;
-  padding-top: 11px;
-  padding-left: 16px;
+  padding-left: 3px;
   border-radius: 50px;
-  display: none;
+  // display: none;
   & a i {
     color: #fff;
     font-size: 1rem;
+    padding: 13px;
   }
-}
-.menutable {
-  display: none;
 }
 .header__mb.row {
   display: none;
+}
+
+#close {
+  display: none;
+}
+.rotate-left {
+  transform: rotate(180deg);
+  transition: transform 0.5s linear;
+}
+.nav_menu {
+  display: block;
 }

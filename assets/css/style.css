@@ -148,10 +148,6 @@ ul li.main i {
   margin-top: 4px;
   margin-left: 2px;
 }
-ul li.main:hover .mini_menu {
-  opacity: 1;
-  animation: toTop ease-in-out 0.3s;
-}
 ul li.opinfo {
   display: flex;
   align-items: center;
@@ -169,10 +165,6 @@ ul li.opinfo i {
 }
 ul li.opinfo .mini_menu {
   left: -17px;
-}
-ul li.opinfo:hover .mini_menu {
-  opacity: 1;
-  animation: toTop ease-in-out 0.3s;
 }
 
 @keyframes overShow {
@@ -438,26 +430,34 @@ ul.mini_menu::before {
 
 .srolltop {
   position: absolute;
-  bottom: -53%;
   right: 3%;
   width: 40px;
+  bottom: 100px;
   height: 40px;
   border: 1px solid transparent;
   background: #5869da;
-  padding-top: 11px;
-  padding-left: 16px;
+  padding-left: 3px;
   border-radius: 50px;
-  display: none;
 }
 .srolltop a i {
   color: #fff;
   font-size: 1rem;
-}
-
-.menutable {
-  display: none;
+  padding: 13px;
 }
 
 .header__mb.row {
   display: none;
+}
+
+#close {
+  display: none;
+}
+
+.rotate-left {
+  transform: rotate(180deg);
+  transition: transform 0.5s linear;
+}
+
+.nav_menu {
+  display: block;
 }/*# sourceMappingURL=style.css.map */

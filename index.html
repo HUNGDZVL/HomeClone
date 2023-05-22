@@ -18,6 +18,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
+
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./assets/css/grid.css" />
     <link rel="stylesheet" href="./assets/css/responsive.css" />
@@ -59,18 +60,25 @@
 
       <div class="header_nav">
         <div class="nav grid wide">
-          <div class="row">
-            <div class="menutable">
-              <i class="fa-solid fa-bars"></i>
+          <div class="nav_row row">
+            <div class="menutable l-0 ls-0 m-10">
+              <i id="open" class="fa-solid fa-bars iconmenu"></i>
+              <i id="close" class="fa-solid fa-arrow-up iconmenuarow"></i>
               <p>Menu</p>
             </div>
-            <div class="nav_menu col l-10 ls-10 m-10">
+            <div class="nav_menu col l-10 ls-10 m-12 c-12">
               <ul>
                 <li class="main">
-                  <img src="./assets/img/house.png" alt="" />
-                  <a href="#">Trang chủ</a>
-                  <i class="fa-solid fa-chevron-down"></i>
-                  <ul class="mini_menu">
+                  <div>
+                    <img src="./assets/img/house.png" alt="" />
+                    <a href="#">Trang chủ</a>
+                    <i class="fa-solid fa-chevron-down down"></i>
+                    <div class="plus_minus">
+                      <i class="fa-solid fa-plus plus active"></i>
+                      <i class="fa-solid fa-minus minus disable"></i>
+                    </div>
+                  </div>
+                  <ul class="mini_menu disable">
                     <li><a href="#">Trang chủ chính</a></li>
                     <li><a href="#">Trang chủ 2</a></li>
                     <li><a href="#">Trang chủ 3</a></li>
@@ -95,9 +103,15 @@
                   <a class="lib" href="#">Thư viện ảnh</a>
                 </li>
                 <li class="opinfo">
-                  <a href="#">Giao diện tin tức</a>
-                  <i class="fa-solid fa-chevron-down"></i>
-                  <ul class="mini_menu">
+                  <div>
+                    <a href="#">Giao diện tin tức</a>
+                    <i class="fa-solid fa-chevron-down down"></i>
+                    <div class="plus_minus">
+                      <i class="fa-solid fa-plus plus active"></i>
+                      <i class="fa-solid fa-minus minus disable"></i>
+                    </div>
+                  </div>
+                  <ul class="mini_menu disable">
                     <li><a href="#">Dạng lưới</a></li>
                     <li><a href="#">Dạng danh sách</a></li>
                     <li><a href="#">Giao diện lớn</a></li>
@@ -276,5 +290,6 @@
         </a>
       </div>
     </div>
+    <script src="./assets/js/main.js"></script>
   </body>
 </html>
