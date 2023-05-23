@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   box-sizing: inherit; /* ke thua tu the html co thuoc tinh boderbox*/
   margin: 0;
@@ -17,13 +18,13 @@ li {
 }
 
 p {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   color: #687385;
   font-weight: 500;
 }
 
 a {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   text-decoration: none;
   color: #687385;
   font-weight: 500;
@@ -469,6 +470,10 @@ ul.mini_menu::before {
   display: none;
 }
 
+.closed {
+  display: none !important;
+}
+
 .rotate-left {
   transform: rotate(180deg);
   transition: transform 0.5s linear;
@@ -496,4 +501,106 @@ ul.mini_menu::before {
     opacity: 1;
     height: 8%;
   }
+}
+.footer_sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  z-index: 15;
+}
+
+.footer_overlow {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.footer_ct {
+  background-color: #f7f8f9;
+}
+
+.footer_ct.col.l-3.l-o-9 {
+  height: 100vh;
+  overflow-y: auto;
+  position: relative;
+}
+.footer_ct.col.l-3.l-o-9::-webkit-scrollbar {
+  width: 0px; /* Đặt chiều rộng của thanh cuộn */
+}
+.footer_ct.col.l-3.l-o-9 i {
+  margin: 0px;
+  font-size: 1.8rem;
+  position: absolute;
+  top: 22px;
+  right: 30px;
+  cursor: pointer;
+}
+.footer_ct.col.l-3.l-o-9 p:not(.content) {
+  margin-bottom: 12px;
+  display: flex;
+  border-bottom: 1px solid #eaecee;
+  padding-bottom: 8px;
+  cursor: pointer;
+  justify-content: space-between;
+}
+.footer_ct.col.l-3.l-o-9 p:not(.content) span {
+  border: 1px solid;
+  padding: 4px 8px;
+  border-radius: 50%;
+  background-color: #687385;
+  color: #f7f8f9;
+}
+.footer_ct.col.l-3.l-o-9 p:not(.content) span:hover {
+  background-color: #e3363e;
+}
+
+.footer_sidebar--item {
+  margin: 40px 30px;
+}
+.footer_sidebar--item .imgfn {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.footer_sidebar--option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  cursor: pointer;
+}
+.footer_sidebar--option img {
+  width: 80px;
+  border-radius: 8px;
+}
+.footer_sidebar--option p {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  border: 1px solid transparent !important;
+  padding-left: 20px;
+  padding-top: 8px;
+  font-size: 1.3rem;
+  color: #212529;
+  font-weight: 600;
+  line-height: 1.8rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Số dòng tối đa để hiển thị */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.footer_sidebar--option p:hover {
+  color: #5869da;
+}
+.footer_sidebar--option content {
+  cursor: text;
+}
+.footer_sidebar--option:hover {
+  transform: translateY(-10%);
+  transition: transform 0.3s ease-in-out;
 }/*# sourceMappingURL=style.css.map */

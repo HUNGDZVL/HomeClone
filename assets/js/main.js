@@ -10,6 +10,7 @@ function start() {
   handlesrollbrowser();
   showmenuWhensroll();
   scrollTopicon();
+  handleChickimgMenu();
 }
 start();
 function handleClickItemMenu(callbackOpenmenu) {
@@ -84,10 +85,12 @@ function hadleClickPlusMinus() {
         iconplus.classList.replace("active", "disable");
         iconminus.classList.replace("disable", "active");
         minimenu.classList.remove("disable");
+        minimenu.classList.add("animation");
       } else {
         iconplus.classList.replace("disable", "active");
         iconminus.classList.replace("active", "disable");
         minimenu.classList.add("disable");
+        minimenu.classList.remove("animation");
       }
     };
   });
@@ -143,4 +146,24 @@ function scrollTopicon() {
       scrollButton.style.display = "none";
     }
   });
+}
+
+function handleChickimgMenu() {
+  const imgmenu = $("#nav--option");
+  const footersidebar = $(".footer_sidebar");
+  const iconclose = $("#closenav--js");
+  const footer_ct = $(".footer_ct ");
+  imgmenu.onclick = function () {
+    footersidebar.classList.remove("closed");
+  };
+  iconclose.onclick = function (e) {
+    e.stopPropagation();
+    footersidebar.classList.add("closed");
+  };
+  footersidebar.onclick = function () {
+    footersidebar.classList.add("closed");
+  };
+  footer_ct.onclick = function (e) {
+    e.stopPropagation();
+  };
 }

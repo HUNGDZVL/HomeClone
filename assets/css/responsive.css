@@ -85,6 +85,11 @@
 
     }
 
+    .animation {
+        animation: srollbottomclose 0.3s ease-in-out forwards;
+        z-index: 3;
+    }
+
     @keyframes srollbottomclose {
         from {
             transform: translateY(0);
@@ -98,6 +103,8 @@
     }
 
 
+
+
     @keyframes srollbottom {
         from {
             transform: translateY(-200%);
@@ -109,6 +116,7 @@
     }
 
     ul li.main .mini_menu {
+        position: relative;
         box-shadow: none;
         width: 100%;
         display: contents;
