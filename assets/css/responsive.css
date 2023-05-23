@@ -278,3 +278,9 @@
 
 
 }
+
+@media (max-width: 370px) {
+    .header_logo img {
+        width: 80px;
+    }
+}
