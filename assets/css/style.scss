@@ -553,15 +553,15 @@ ul.mini_menu {
   & img {
     width: 80px;
     border-radius: 8px;
+    margin-right: 12px;
   }
   & p {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
     border: 1px solid transparent !important;
-    padding-left: 20px;
     padding-top: 8px;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     color: $textfooter;
     font-weight: 600;
     line-height: 1.8rem;

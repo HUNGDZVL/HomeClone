@@ -577,15 +577,15 @@ ul.mini_menu::before {
 .footer_sidebar--option img {
   width: 80px;
   border-radius: 8px;
+  margin-right: 12px;
 }
 .footer_sidebar--option p {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
   border: 1px solid transparent !important;
-  padding-left: 20px;
   padding-top: 8px;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   color: #212529;
   font-weight: 600;
   line-height: 1.8rem;
