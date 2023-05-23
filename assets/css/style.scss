@@ -458,6 +458,7 @@ ul.mini_menu {
 .closed {
   display: none !important;
 }
+
 .rotate-left {
   transform: rotate(180deg);
   transition: transform 0.5s linear;
@@ -500,6 +501,8 @@ ul.mini_menu {
 }
 .footer_ct {
   background-color: $bgfooter;
+  position: absolute;
+  right: -100%;
 }
 
 .footer_ct.col.l-3.l-o-9 {

@@ -155,13 +155,25 @@ function handleChickimgMenu() {
   const footer_ct = $(".footer_ct ");
   imgmenu.onclick = function () {
     footersidebar.classList.remove("closed");
+    setTimeout(function () {
+      footer_ct.style.right = "0";
+      footer_ct.style.transition = "right 0.3s ease-in-out ";
+    }, 100);
   };
   iconclose.onclick = function (e) {
     e.stopPropagation();
-    footersidebar.classList.add("closed");
+    setTimeout(function () {
+      footersidebar.classList.add("closed");
+    }, 300);
+    footer_ct.style.right = "-100%";
+    footer_ct.style.transition = "right 0.3s ease-in-out ";
   };
   footersidebar.onclick = function () {
-    footersidebar.classList.add("closed");
+    setTimeout(function () {
+      footersidebar.classList.add("closed");
+    }, 300);
+    footer_ct.style.right = "-100%";
+    footer_ct.style.transition = "right 0.3s ease-in-out ";
   };
   footer_ct.onclick = function (e) {
     e.stopPropagation();
