@@ -11,6 +11,12 @@ function start() {
   showmenuWhensroll();
   scrollTopicon();
   handleChickimgMenu();
+  // Gọi hàm typingEffect để bắt đầu hiệu ứng gõ chữ
+  typingEffect();
+  //toggle contentcontent when click next pre
+  registerEventListeners();
+  //courasel
+  slideCarousel(getVisibleItems);
 }
 start();
 function handleClickItemMenu(callbackOpenmenu) {
@@ -120,8 +126,8 @@ function showmenuWhensroll() {
     let navMenu = document.querySelector(".header_nav");
     let scrollPosition = window.scrollY || window.pageYOffset;
     // lấy vị trí scroll của trang qa croll Y và kiểm tra xem nếu vượt quá 30% thì add lass tickey cho element, ngc lại remove nó đi
-
-    if (scrollPosition >= 0.3 * window.innerHeight) {
+    console.log(scrollPosition);
+    if (scrollPosition >= 0.4 * window.innerHeight) {
       navMenu.classList.add("sticky");
     } else {
       navMenu.classList.remove("sticky");
@@ -178,4 +184,126 @@ function handleChickimgMenu() {
   footer_ct.onclick = function (e) {
     e.stopPropagation();
   };
+}
+function typingEffect() {
+  let texts = ["Travel Blogger.", " Content Writer.", " Food Guides."];
+  let currentTextIndex = 0;
+  let currentCharIndex = 0;
+  let typingSpeed = 100;
+  let typingEffectElement = $(".text_muted");
+
+  function typeNextText() {
+    if (currentTextIndex < texts.length) {
+      let currentText = texts[currentTextIndex];
+
+      if (currentCharIndex < currentText.length) {
+        typingEffectElement.textContent += currentText.charAt(currentCharIndex);
+        currentCharIndex++;
+        setTimeout(typeNextText, typingSpeed);
+      } else {
+        setTimeout(deleteText, 1000);
+      }
+    } else {
+      currentTextIndex = 0;
+      setTimeout(typeNextText, 1000);
+    }
+  }
+
+  function deleteText() {
+    let currentText = typingEffectElement.textContent;
+
+    if (currentCharIndex > 0) {
+      typingEffectElement.textContent = currentText.slice(0, -1);
+      currentCharIndex--;
+      setTimeout(deleteText, typingSpeed);
+    } else {
+      currentTextIndex++;
+      setTimeout(typeNextText, typingSpeed);
+    }
+  }
+
+  typeNextText();
+}
+
+function toggleContent() {
+  let paragraphElement = $("#paragraph");
+  let headingElement = $("#heading");
+  let infoElement = $("#info");
+
+  let currentContent = paragraphElement.textContent.trim();
+  let newParagraph, newHeading, newInfo;
+
+  if (currentContent === "DESTINATIONFOOD") {
+    newParagraph = "TRAVEL<span>REVIEW</span>";
+    newHeading = `A Skin Cream That's Proven To Work`;
+    newInfo = "3 months ago . 1,999 views";
+  } else {
+    newParagraph = "DESTINATION<span>FOOD</span>";
+    newHeading = "10 Reasons To Start Your Own, Profitable Website!";
+    newInfo = "3 months ago . 2,303 views";
+  }
+
+  paragraphElement.innerHTML = newParagraph;
+  headingElement.textContent = newHeading;
+  infoElement.textContent = newInfo;
+}
+
+function registerEventListeners() {
+  document
+    .querySelector(".roundtwotext .fa-arrow-left")
+    .addEventListener("click", toggleContent);
+  document
+    .querySelector(".roundtwotext .fa-arrow-right")
+    .addEventListener("click", toggleContent);
+}
+function slideCarousel(callbaclcarousel) {
+  const carousel = document.querySelector(".courasel_row");
+  const carouselItems = carousel.querySelector(".courasel_items");
+  const items = carousel.querySelectorAll(".item");
+  const itemWidth = items[0].offsetWidth;
+  // lấy chiều rộng của item đầu tiên trong items
+  const visibleItems = 3;
+  //item hiển thị trên màn hình là 3
+  let currentPosition = 0;
+  // khởi tạo biến currentPosition với giá trị ban đầu là 0.
+
+  setInterval(() => {
+    currentPosition++;
+    const transformValue = -currentPosition * itemWidth;
+    //tính giá trị transform dựa trên currentPosition và itemWidth để di chuyển carousel sang trái.
+    carouselItems.style.transition = "transform 0.5s";
+    carouselItems.style.transform = `translateX(${transformValue}px)`;
+
+    //carouselItems.style.transition đặt hiệu ứng chuyển động của carousel là transform với thời gian là 0.5s.
+    //carouselItems.style.transform thiết lập giá trị transform để di chuyển carousel với giá trị đã tính toán.
+
+    if (currentPosition >= items.length - visibleItems + 0) {
+      //kiểm tra nếu currentPosition vượt quá hoặc bằng items.length - visibleItems + 0 (nghĩa là khi đến cuối carousel),
+      //sẽ thực hiện setTimeout để reset vị trí carousel về đầu.
+      setTimeout(() => {
+        //Trong setTimeout, currentPosition được đặt lại là 0, và carouselItems.style.transition và carouselItems.style.transform được thiết lập để không có hiệu ứng chuyển động.
+        //Đoạn code trên sẽ được lặp lại sau mỗi 4 giây (4000ms) để tạo hiệu ứng chạy
+        currentPosition = 0;
+        carouselItems.style.transition = "none";
+        carouselItems.style.transform = `translateX(0)`;
+      }, 1500);
+    }
+  }, 4000);
+  // check item trên các thiêts bị để carousel
+  callbaclcarousel();
+}
+function getVisibleItems() {
+  //check xem kich thước trính duyệt xem ở màn thiết bị nào thì trả về số lượng item tương ứng
+  const screenWidth = window.innerWidth;
+  if (screenWidth >= 1280) {
+    return 3;
+  } else if (screenWidth >= 1024) {
+    return 2;
+  } else if (screenWidth >= 740) {
+    return 2;
+  } else if (screenWidth >= 280) {
+    return 1;
+  } else {
+    return 1;
+  }
 }

@@ -4,11 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Galleries</title>
+    <title>Stories - The little things</title>
     <link rel="icon" type="image/x-icon" href="./assets/img/logo.png" />
+
     <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700;900&display=swap"
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Roboto:300,400, 500, 700&amp;display=swap&amp;subset=vietnamese"
     />
     <link
       rel="stylesheet"
@@ -29,7 +30,7 @@
       style="
         position: relative;
         display: grid;
-        grid-template-rows: 0 auto auto 1fr auto;
+        grid-template-rows: auto auto auto 1fr auto;
         height: 100vh;
       "
     >
@@ -51,19 +52,20 @@
             <img src="./assets/img/logoheader.png" alt="logoheader" />
           </div>
           <div class="header_option col l-8 ls-8 m-8 c-6 cs-6">
-            <div class="header_option_contact">
-              <p>Liên hệ</p>
-            </div>
             <div class="header_option_language">
-              <img src="./assets/img/us.svg" alt="us" />
-              <p>English</p>
+              <img
+                src="./assets/img/us.png
+              "
+                alt="us"
+              />
+              <p>Tiếng Việt</p>
             </div>
             <div class="header_option_search">
               <i class="fa-solid fa-magnifying-glass"></i>
-              <p>Tìm kiếm</p>
+              <p>Search</p>
             </div>
             <div class="header_option_cart">
-              <p>Mua ngay</p>
+              <p>Buy Now</p>
             </div>
           </div>
         </div>
@@ -82,7 +84,7 @@
                 <li class="main">
                   <div>
                     <img src="./assets/img/house.png" alt="" />
-                    <a href="#">Trang chủ</a>
+                    <a href="#">Home</a>
                     <i class="fa-solid fa-chevron-down down"></i>
                     <div class="plus_minus">
                       <i class="fa-solid fa-plus plus active"></i>
@@ -90,32 +92,32 @@
                     </div>
                   </div>
                   <ul class="mini_menu disable">
-                    <li><a href="#">Trang chủ chính</a></li>
-                    <li><a href="#">Trang chủ 2</a></li>
-                    <li><a href="#">Trang chủ 3</a></li>
+                    <li><a href="#">Home default</a></li>
+                    <li><a href="#">Home 2</a></li>
+                    <li><a href="#">Home 3</a></li>
                   </ul>
                 </li>
                 <li>
-                  <a href="#">Du lịch</a>
+                  <a href="#">Travel</a>
                 </li>
                 <li>
-                  <a href="#">Điểm đến</a>
+                  <a href="#">Destination</a>
                 </li>
                 <li>
-                  <a href="#">Khách sạn</a>
+                  <a href="#">Hotels</a>
                 </li>
                 <li>
-                  <a href="#">Phong cách sống</a>
+                  <a href="#">Lifestyle</a>
                 </li>
                 <li>
-                  <a href="#">Tin tức</a>
+                  <a href="#">Blog</a>
                 </li>
                 <li>
-                  <a class="lib" href="#">Thư viện ảnh</a>
+                  <a class="lib" href="#">TGalleries</a>
                 </li>
                 <li class="opinfo">
                   <div>
-                    <a href="#">Giao diện tin tức</a>
+                    <a href="#">Blog layouts</a>
                     <i class="fa-solid fa-chevron-down down"></i>
                     <div class="plus_minus">
                       <i class="fa-solid fa-plus plus active"></i>
@@ -123,13 +125,13 @@
                     </div>
                   </div>
                   <ul class="mini_menu disable">
-                    <li><a href="#">Dạng lưới</a></li>
-                    <li><a href="#">Dạng danh sách</a></li>
-                    <li><a href="#">Giao diện lớn</a></li>
+                    <li><a href="#">Grid layout</a></li>
+                    <li><a href="#">List Layout</a></li>
+                    <li><a href="#">Big layout</a></li>
                   </ul>
                 </li>
                 <li>
-                  <a href="#">Liên hệ</a>
+                  <a href="#">Contact </a>
                 </li>
               </ul>
             </div>
@@ -150,62 +152,499 @@
           </div>
         </div>
       </div>
-      <div class="container">
-        <div class="grid wide">
-          <div class="row">
-            <div class="container_img col l-4 ls-4 m-4">
-              <div class="container_img--option">
-                <img src="./assets/img/bg1.jpg" alt="" />
-                <div class="container_option">
-                  <a href="#">PERFECT</a>
-                  <p>Theo Rue Rouji</p>
+      <div class="roundone">
+        <div class="container">
+          <div class="grid wide">
+            <div class="roundone_row row">
+              <div class="container__text col l-6 ls-6 m-12 c-12 cs-12">
+                <p class="text_muted"></p>
+                <h2>
+                  Hello, I’m
+                  <span style="color: #13d6a3"> rue </span>
+                </h2>
+                <h3>Welcome to my blog</h3>
+                <h5>
+                  Don't miss out on the latest news about Travel tips, Hotels
+                  review, Food guide...
+                </h5>
+                <div class="inputform">
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Enter your email"
+                  />
+                  <button>Subscribe</button>
                 </div>
               </div>
-            </div>
-            <div class="container_img col l-4 ls-4 m-4">
-              <div class="container_img--option">
-                <img src="./assets/img/bg2.jpg" alt="" />
-                <div class="container_option">
-                  <a href="#">NEW DAY</a>
-                  <p>Theo Rue Rouji</p>
-                </div>
+              <div class="col l-6 ls-6 m-0 c-0 cs-0 img_600x600">
+                <img src="./assets/img/460.png" alt="" />
               </div>
             </div>
-            <div class="container_img col l-4 ls-4 m-4">
-              <div class="container_img--option">
-                <img src="./assets/img/bg3.jpg" alt="" />
-                <div class="container_option">
-                  <a href="#">HAPPY DAY</a>
-                  <p>Theo Rue Rouji</p>
+          </div>
+        </div>
+      </div>
+      <div class="roundtwo">
+        <div class="container">
+          <div class="grid wide">
+            <div class="roundtwo_row row">
+              <p class="col l-4 ls-4 m-4">FEATURED POSTS</p>
+              <div class="roundtowtext col l-8 ls-8 m-8 cs-12">
+                <div class="twotext">
+                  <img src="./assets/img/tag.png" alt="" />
+                  <p>Hot tags:</p>
+                </div>
+                <ul>
+                  <li><a href="#"># General</a></li>
+                  <li><a href="#"># Design</a></li>
+                  <li><a href="#"># fashion</a></li>
+                  <li><a href="#"># Branding</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="roundtwo_row row">
+              <div class="roundtwoimg col l-8 ls-8 m-12 c-12 cs-12">
+                <div
+                  class="background8"
+                  style="
+                    background: url('./assets/img/600big.jpg');
+                    background-position: center;
+
+                    box-shadow: 1px -190px 20px rgba(0, 0, 0, 0.3) inset;
+                  "
+                >
+                  <img src="./assets/img/star.png" alt="" />
+                  <div class="roundtwotext">
+                    <p id="paragraph">DESTINATION<span>FOOD</span></p>
+                    <h1 id="heading">
+                      10 Reasons To Start Your Own, Profitable <br />
+                      Website!
+                    </h1>
+                    <div class="roundtwotext__arrow">
+                      <p id="info">3 months ago . 2,303 views</p>
+                      <div class="arrowicon">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        <i class="fa-solid fa-arrow-right"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="roundtwobg col l-4 ls-4 m-6 c-12 cs-12">
+                <div
+                  class="backround__left"
+                  style="
+                    background: url('./assets/img/600big.jpg');
+                    background-position: center;
+                    box-shadow: 1px -80px 20px rgba(0, 0, 0, 0.3) inset;
+                  "
+                ></div>
+                <div class="backround__righttext">
+                  <img class="option" src="./assets/img/option.png" alt="" />
+                  <img class="options" src="./assets/img/op.png" alt="" />
+                  <p class="title">Travel .</p>
+                  <h1>
+                    Are You Still Using That<br />
+                    Slow, Old Typewriter?
+                  </h1>
+                  <p>FEB 20, 2023 . 2,303 MINS READ . 1,202 VIEWS</p>
+                </div>
+              </div>
+              <div class="roundtwobg col l-4 ls-4 m-6 c-12 cs-12">
+                <div
+                  class="backround__left"
+                  style="
+                    background: url('./assets/img/600big.jpg');
+                    background-position: center;
+                    box-shadow: 1px -80px 20px rgba(0, 0, 0, 0.4) inset;
+                  "
+                ></div>
+
+                <div class="backround__righttext">
+                  <img class="option" src="./assets/img/option.png" alt="" />
+                  <img class="options" src="./assets/img/op.png" alt="" />
+                  <p class="title">Destination .</p>
+                  <h1>
+                    Imagine Losing 20 Pounds<br />
+                    In 14 Days!
+                  </h1>
+                  <p>FEB 20, 2023 . 2,303 MINS READ . 1,202 VIEWS</p>
+                </div>
+              </div>
+              <div class="roundtwobg col l-4 ls-4 m-6 c-12 cs-12">
+                <div
+                  class="backround__left"
+                  style="
+                    background: url('./assets/img/600big.jpg');
+                    background-position: center;
+                    box-shadow: 1px -80px 20px rgba(0, 0, 0, 0.4) inset;
+                  "
+                ></div>
+
+                <div class="backround__righttext">
+                  <img class="option" src="./assets/img/option.png" alt="" />
+                  <img class="options" src="./assets/img/op.png" alt="" />
+                  <p class="title">Travel</p>
+                  <h1>
+                    The Secrets Of Rich And<br />
+                    Famous Writers
+                  </h1>
+                  <p>FEB 20, 2023 . 12 MINS READ . 1,855 VIEWS</p>
+                </div>
+              </div>
+              <div class="roundtwobg col l-4 ls-4 m-6 c-12 cs-12">
+                <div
+                  class="backround__left"
+                  style="
+                    background: url('./assets/img/600big.jpg');
+                    background-position: center;
+                    box-shadow: 1px -80px 20px rgba(0, 0, 0, 0.4) inset;
+                  "
+                ></div>
+
+                <div class="backround__righttext">
+                  <img class="option" src="./assets/img/option.png" alt="" />
+                  <img class="options" src="./assets/img/op.png" alt="" />
+                  <p class="title">Travel</p>
+                  <h1>
+                    20 Ways To Sell Your<br />
+                    Product Faster
+                  </h1>
+                  <p>FEB 20, 2023 . 12 MINS READ . 1,522 VIEWS</p>
                 </div>
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="container_img col l-4 ls-4 m-4">
-              <div class="container_img--option">
-                <img src="./assets/img/bg4.jpg" alt="" />
-                <div class="container_option">
-                  <a href="#">NATURE</a>
-                  <p>Theo Rue Rouji</p>
-                </div>
+        </div>
+      </div>
+
+      <div class="List_item">
+        <div class="grid wide">
+          <div class="litem_row row">
+            <div class="col l-4 ls-4 m-4">
+              <p class="content" style="color: #212529; font-weight: 600">
+                GUIDES
+              </p>
+              <div class="footer_sidebar--option">
+                <img src="./assets/img/600.jpg" alt="" />
+                <p>
+                  The Top 2020 Handbag Trends Know<br /><content
+                    style="
+                      font-size: 10px;
+                      color: #687385;
+                      margin-top: 12px;
+                      font-weight: 400;
+                    "
+                    >FEB 20, 2023 258 VIEWS</content
+                  >
+                </p>
+              </div>
+              <div class="footer_sidebar--option">
+                <img src="./assets/img/600.jpg" alt="" />
+                <p>
+                  Top Search Engine Strategies!<br /><content
+                    style="
+                      font-size: 10px;
+                      color: #687385;
+                      margin-top: 12px;
+                      font-weight: 400;
+                    "
+                    >FEB 20, 2023 1,335 VIEWS</content
+                  >
+                </p>
+              </div>
+              <div class="footer_sidebar--option">
+                <img src="./assets/img/600.jpg" alt="" />
+                <p>
+                  Apple iMac with Retina 5K display review<br /><content
+                    style="
+                      font-size: 10px;
+                      color: #687385;
+                      margin-top: 12px;
+                      font-weight: 400;
+                    "
+                    >FEB 20, 2023 2,494 VIEWS</content
+                  >
+                </p>
               </div>
             </div>
-            <div class="container_img col l-4 ls-4 m-4">
-              <div class="container_img--option">
-                <img src="./assets/img/bg5.jpg" alt="" />
-                <div class="container_option">
-                  <a href="#">MORNING</a>
-                  <p>Theo Rue Rouji</p>
-                </div>
+            <div class="col l-4 ls-4 m-4">
+              <p class="content" style="color: #212529; font-weight: 600">
+                DESTINATION
+              </p>
+              <div class="footer_sidebar--option">
+                <img src="./assets/img/600.jpg" alt="" />
+                <p>
+                  Imagine Losing 20 Pounds In 14<br />
+                  Days! <br /><content
+                    style="
+                      font-size: 10px;
+                      color: #687385;
+                      margin-top: 12px;
+                      font-weight: 400;
+                    "
+                    >FEB 20, 2023 349 VIEWS</content
+                  >
+                </p>
+              </div>
+              <div class="footer_sidebar--option">
+                <img src="./assets/img/600.jpg" alt="" />
+                <p>
+                  10 Reasons To Start Your Own, Website!<br /><content
+                    style="
+                      font-size: 10px;
+                      color: #687385;
+                      margin-top: 12px;
+                      font-weight: 400;
+                    "
+                    >FEB 20, 2023 2,304 VIEWS</content
+                  >
+                </p>
+              </div>
+              <div class="footer_sidebar--option">
+                <img src="./assets/img/600.jpg" alt="" />
+                <p>
+                  Unlock The Secrets Of Selling High <br /><content
+                    style="
+                      font-size: 10px;
+                      color: #687385;
+                      margin-top: 12px;
+                      font-weight: 400;
+                    "
+                    >FEB 20, 2023 2,030 VIEWS</content
+                  >
+                </p>
               </div>
             </div>
-            <div class="container_img col l-4 ls-4 m-4">
-              <div class="container_img--option">
-                <img src="./assets/img/bg6.jpg" alt="" />
-                <div class="container_option">
-                  <a href="#">PHOTOGRAPHY</a>
-                  <p>Theo Rue Rouji</p>
+            <div class="col l-4 ls-4 m-4">
+              <p class="content" style="color: #212529; font-weight: 600">
+                FOOD
+              </p>
+              <div class="footer_sidebar--option">
+                <img src="./assets/img/600.jpg" alt="" />
+                <p>
+                  The Top 2020 Handbag Trends to Know<br /><content
+                    style="
+                      font-size: 10px;
+                      color: #687385;
+                      margin-top: 12px;
+                      font-weight: 400;
+                    "
+                    >FEB 20, 2023 1,335 VIEWS</content
+                  >
+                </p>
+              </div>
+              <div class="footer_sidebar--option">
+                <img src="./assets/img/600.jpg" alt="" />
+                <p>
+                  The Secrets Of Rich And Famous Writers<br /><content
+                    style="
+                      font-size: 10px;
+                      color: #687385;
+                      margin-top: 12px;
+                      font-weight: 400;
+                    "
+                    >FEB 20, 2023 1,885 VIEWS</content
+                  >
+                </p>
+              </div>
+              <div class="footer_sidebar--option">
+                <img src="./assets/img/600.jpg" alt="" />
+                <p>
+                  Are You Still Using That Slow?<br />
+                  <content
+                    style="
+                      font-size: 10px;
+                      color: #687385;
+                      margin-top: 12px;
+                      font-weight: 400;
+                    "
+                    >FEB 20, 2023 1,202 VIEWS</content
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="courasel_row row">
+            <div class="col l-12 ls-12">
+              <p class="content" style="color: #212529; font-weight: 600">
+                CATEGORIES
+              </p>
+            </div>
+            <div class="courasel_items col l-12 ls-12 m-12 c-12 cs-12">
+              <div class="item col l-4 ls-6 m-6 c-12 cs-12">
+                <div class="footer_sidebar--option bordercar">
+                  <img
+                    src="./assets/img/600.jpg"
+                    alt=""
+                    style="border-radius: 50%"
+                  />
+                  <p style="font-size: 16px; padding-bottom: 12px">
+                    Hotels<br />
+                    <content
+                      style="
+                        font-size: 14px;
+                        color: #687385;
+                        margin-top: 16px;
+                        font-weight: 400;
+                      "
+                      >In dolore optio provident qui quisquam. Cupiditate
+                      perspiciatis f...</content
+                    >
+                  </p>
+                </div>
+              </div>
+              <div class="item col l-4 ls-6 m-6 c-12 cs-12">
+                <div class="footer_sidebar--option bordercar">
+                  <img
+                    src="./assets/img/600.jpg"
+                    alt=""
+                    style="border-radius: 50%"
+                  />
+                  <p style="font-size: 16px; padding-bottom: 12px">
+                    Travel<br />
+                    <content
+                      style="
+                        font-size: 14px;
+                        color: #687385;
+                        margin-top: 16px;
+                        font-weight: 400;
+                      "
+                      >Nemo perferendis est aut laudantium aut soluta illo.
+                      Tenetur et d...</content
+                    >
+                  </p>
+                </div>
+              </div>
+              <div class="item col l-4 ls-6 m-6 c-12 cs-12">
+                <div class="footer_sidebar--option bordercar">
+                  <img
+                    src="./assets/img/600.jpg"
+                    alt=""
+                    style="border-radius: 50%"
+                  />
+                  <p style="font-size: 16px; padding-bottom: 12px">
+                    Destination<br />
+                    <content
+                      style="
+                        font-size: 14px;
+                        color: #687385;
+                        margin-top: 16px;
+                        font-weight: 400;
+                      "
+                      >Velit cum ut consequuntur qui repellendus sit sunt.
+                      Occaecati non...</content
+                    >
+                  </p>
+                </div>
+              </div>
+              <div class="item col l-4 ls-6 m-6 c-12 cs-12">
+                <div class="footer_sidebar--option bordercar">
+                  <img
+                    src="./assets/img/600.jpg"
+                    alt=""
+                    style="border-radius: 50%"
+                  />
+                  <p style="font-size: 16px; padding-bottom: 12px">
+                    LifeStyle<br />
+                    <content
+                      style="
+                        font-size: 14px;
+                        color: #687385;
+                        margin-top: 16px;
+                        font-weight: 400;
+                      "
+                      >Nemo perferendis est aut laudantium aut soluta illo.
+                      Tenetur et d...</content
+                    >
+                  </p>
+                </div>
+              </div>
+              <div class="item col l-4 ls-6 m-6 c-12 cs-12">
+                <div class="footer_sidebar--option bordercar">
+                  <img
+                    src="./assets/img/600.jpg"
+                    alt=""
+                    style="border-radius: 50%"
+                  />
+                  <p style="font-size: 16px; padding-bottom: 12px">
+                    Hotels<br />
+                    <content
+                      style="
+                        font-size: 14px;
+                        color: #687385;
+                        margin-top: 16px;
+                        font-weight: 400;
+                      "
+                      >In dolore optio provident qui quisquam. Cupiditate
+                      perspiciatis f...</content
+                    >
+                  </p>
+                </div>
+              </div>
+              <div class="item col l-4 ls-6 m-6 c-12 cs-12">
+                <div class="footer_sidebar--option bordercar">
+                  <img
+                    src="./assets/img/600.jpg"
+                    alt=""
+                    style="border-radius: 50%"
+                  />
+                  <p style="font-size: 16px; padding-bottom: 12px">
+                    Travel<br />
+                    <content
+                      style="
+                        font-size: 14px;
+                        color: #687385;
+                        margin-top: 16px;
+                        font-weight: 400;
+                      "
+                      >Nemo perferendis est aut laudantium aut soluta illo.
+                      Tenetur et d...</content
+                    >
+                  </p>
+                </div>
+              </div>
+              <div class="item col l-4 ls-6 m-6 c-12 cs-12">
+                <div class="footer_sidebar--option bordercar">
+                  <img
+                    src="./assets/img/600.jpg"
+                    alt=""
+                    style="border-radius: 50%"
+                  />
+                  <p style="font-size: 16px; padding-bottom: 12px">
+                    Destination<br />
+                    <content
+                      style="
+                        font-size: 14px;
+                        color: #687385;
+                        margin-top: 16px;
+                        font-weight: 400;
+                      "
+                      >Velit cum ut consequuntur qui repellendus sit sunt.
+                      Occaecati non...</content
+                    >
+                  </p>
+                </div>
+              </div>
+              <div class="item col l-4 ls-6 m-6 c-12 cs-12">
+                <div class="footer_sidebar--option bordercar">
+                  <img
+                    src="./assets/img/600.jpg"
+                    alt=""
+                    style="border-radius: 50%"
+                  />
+                  <p style="font-size: 16px; padding-bottom: 12px">
+                    Healthy<br />
+                    <content
+                      style="
+                        font-size: 14px;
+                        color: #687385;
+                        margin-top: 16px;
+                        font-weight: 400;
+                      "
+                      >In dolore optio provident qui quisquam. Cupiditate
+                      perspiciatis f...</content
+                    >
+                  </p>
                 </div>
               </div>
             </div>
@@ -325,8 +764,8 @@
                   <div class="footer_sidebar--option">
                     <img src="./assets/img/600.jpg" alt="" />
                     <p>
-                      Sexy Clutches: How to Buy <br />
-                      &amp; Wear a Designer Clutch...<content
+                      Sexy Clutches: How to Buy &amp; Wear a Designer
+                      Clutch...<content
                         style="
                           font-size: 10px;
                           color: #687385;
@@ -342,7 +781,7 @@
                     <img src="./assets/img/600.jpg" alt="" />
                     <p>
                       4 Expert Tips On How To <br />
-                      Choose The Right Men’s Wallet<content
+                      Choose The Right Men’s<content
                         style="
                           font-size: 10px;
                           color: #687385;
@@ -356,7 +795,7 @@
                   <div class="footer_sidebar--option">
                     <img src="./assets/img/600.jpg" alt="" />
                     <p>
-                      Unlock The Secrets Of Selling <br />
+                      Unlock The Secrets Of<br />
                       High Ticket Items<content
                         style="
                           font-size: 10px;

@@ -163,9 +163,7 @@
   }
 
   .col {
-    padding-left: 4px;
-    padding-right: 4px;
-    padding-bottom: 6px;
+    padding: 12px;
   }
 
   .m-0 {
@@ -305,9 +303,7 @@
   }
 
   .col {
-    padding-left: 4px;
-    padding-right: 4px;
-    padding-bottom: 8px
+    padding: 16px;
   }
 
   .row.sm-gutter .col {
@@ -483,9 +479,8 @@
   }
 
   .col {
-    padding-left: 4px;
-    padding-right: 4px;
-    padding-bottom: 8px;
+    padding: 10px;
+
   }
 
   .row.sm-gutter .col {
@@ -624,9 +619,9 @@
 }
 
 /*# sourceMappingURL=grid.css.map */
-@media (max-width: 370px) {
+@media (max-width: 320px) {
   .wide {
-    width: 200px;
+    width: 250px;
   }
 
   .row {
